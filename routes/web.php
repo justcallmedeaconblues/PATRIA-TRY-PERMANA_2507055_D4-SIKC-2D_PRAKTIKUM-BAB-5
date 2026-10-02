@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReportController;
 Route::get('/profil', function(){
@@ -20,3 +20,7 @@ Route::get('/', [HomeController::class, 'index'])
 
 Route::get('/profil', [HomeController::class, 'profil'])-> name('profil');
 Route::get('/laporan', [HomeController::class, 'laporan'])->name('laporan');
+
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
