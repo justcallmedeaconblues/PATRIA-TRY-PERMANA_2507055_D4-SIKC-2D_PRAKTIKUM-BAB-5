@@ -13,6 +13,7 @@
                 <th>No</th>
                 <th>Nama</th>
                 <th>Deskripsi</th>
+                <th>Dibuat</th>
             </tr>
         </thead>
     <tbody>
@@ -21,6 +22,7 @@
             <td>{{ $loop -> iteration }}</td>
             <td>{{ $category -> name }}</td>
             <td>{{ $category -> description }}</td>
+            <td>{{ $category -> created_at }}</td>
         </tr>
         @empty
         <tr>
