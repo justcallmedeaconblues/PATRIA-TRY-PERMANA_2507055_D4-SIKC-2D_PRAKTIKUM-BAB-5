@@ -15,7 +15,6 @@
                 <th>Deskripsi</th>
             </tr>
         </thead>
-    </table>
     <tbody>
         @forelse($categories as $category)
         <tr>
@@ -29,5 +28,7 @@
         </tr>
     </tbody>
     @endforelse
+        </table>
+
 </div>  
 @endsection
